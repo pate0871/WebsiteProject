@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset ="utf-8" />
+        <!-- This meta tag is includes keywords that will be used by search engines -->
+        <meta name="keywords" content="paulmar housing, paulmar, for rent, university of windsor, housing, student housing, students, engineering, free parking, quality living, modern home, safety, homes near university" />
+        <title>About PaulMar Housing</title>
+        <script src="https://kit.fontawesome.com/b31799f5a9.js" crossorigin="anonymous"></script> <!-- This is my kit of icons -->
+        <style>
+            html, body {
+                margin: 0;
+                padding: 0;
+                font-family: 'Open Sans', sans-serif;
+            }
+            
+            .sideNav {
+                height: 100%;
+                width: 0;
+                position: fixed;
+                z-index: 1;
+                top: 0;
+                left: 0;
+                background-image: url("logo/logoBackground.jpeg");
+                background-blend-mode: multiply;
+                background-size: cover;
+                overflow-x: hidden;
+                transition: 0.5s;
+                padding-top: 60px;
+            }
+
+            .sideNav a {
+                padding: 8px 8px 8px 32px;
+                text-decoration: none;
+                font-size: 25px;
+                color: black;
+                display: block;
+                transition: 0.3s;
+            }
+
+            .sideNav a:hover {
+                color: #f1f1f1;
+            }
+
+            .closeBtn {
+                position: absolute;
+                top: 0;
+                right: 25px;
+                font-size: 36px;
+                margin-left: 50px;
+            }
+
+            @media screen and (max-height: 100px) {
+                .sidenav {padding-top: 15px;}
+                .sidenav a {font-size: 18px;}
+            }
+            hr.iconLine {
+                width:40%;
+                margin-left: 15px;
+            }
+            .navHeader {
+                background-image: url("logo/logoBackground.jpeg");
+                background-blend-mode: multiply;
+                background-size: cover;
+                padding-bottom: 0px;
+                padding-top: 0px;
+            }
+            .header{
+                display: flex;
+                width: calc(100% - 30px);
+                justify-content: space-between;
+                margin-left: 10px;
+            }
+            .center {
+                width: 150px;
+                height: 50px;
+                margin-top: 10px;
+            }
+            .left {
+                color: black;
+                margin-top: 10px;
+                font-size: 25px;
+                cursor:pointer;
+                display:flex;
+            }
+
+            .footerNote {
+                margin-top: 5px;
+                position: fixed;
+                width:100%;
+                bottom: 0; 
+                text-align: center;
+                background-image: url("logo/logoBackground.jpeg");
+                background-blend-mode: multiply;
+                background-size: cover;
+                padding-bottom: 30px;
+            }
+            .footerNote a {
+                text-align: center;
+                text-decoration: none;
+                color: black;
+                margin: 0;
+                padding: 8px;
+            }
+            .footerNote p {
+                margin: 0;
+                color: black;
+            }
+            .footLine {
+                width:50%;
+                color:black;
+            }
+            .footIcon {
+                text-align: center;
+            }
+            .footIcon a {
+                text-decoration: none;
+                font-size: 20px;
+                color: black;
+                padding-right: 25px;
+            }
+            /* For content of the page */
+            .title {
+                text-align: center;
+            }
+            .title hr {
+                background-color: black;
+                width: 30%;
+                height: 2px;
+            }
+            .content-container {
+                width: 100%;
+                background-color: #ffcc33;
+                margin: auto;
+            }
+            .picture {
+                width: 40%;
+                float: left;
+                height: 100px;
+            }
+
+            .content {
+                width: 100%;
+                float: right;
+                height: 100px;
+
+            }
+            .beforeWord::before {
+                content: "PAULMAR";
+                font-size: 150%;
+                font-weight: 900;
+            }
+            .abtPic {
+                width: 400px;
+                height: 300px;
+                box-shadow: 10px 10px 5px grey;
+            }
+            table {
+                margin: auto;
+	            padding: 4px;
+	            /* added this bottom style so my table on 'aboutme.html' page has a bit of visual appeal to it */
+                border-collapse: collapse;  
+            }
+            td {
+                padding: 10px;
+	            /* added this bottom style so my table on 'aboutme.html' page has a bit of visual appeal to it */
+                border-collapse: collapse;
+            }
+
+            h2 {
+                padding-left:103px;
+                margin: 5px;
+            }
+            .beforeWord {
+                padding-left:110px;
+                width: 85%;
+            }
+
+            .beforeWord2 {
+                padding-left:110px;
+                width: 85%;
+            }
+
+            .beforeWord3 {
+                padding-left:110px;
+                width: 85%;
+            }
+            .beforeWord4 {
+
+                padding-left:110px;
+                width: 85%;
+            }
+        </style>
+    </head>
+    <body>
+        <!-- This is for the navigation bar at the top-->
+        <header class="navHeader">
+            <div id="sideNavigation" class="sideNav">
+                <a href="javascript:void(0)" class="closeBtn" onclick="closeNav()">&times;</a>
+                <a href="index.html">HOME</a>
+                <a href="aboutus.html"></i>ABOUT US</a>
+                <a href="safety.html"></i>SAFETY</a>
+                <a href="properties.html"></i>PROPERTIES</a>
+                <a href="contactus.php"></i>CONTACT US</a>
+                
+                <hr class="iconLine"> <!-- line to separate all our linked pages from the social media icons-->
+                <a href="https://www.facebook.com/paulmarhousing" style="display:inline-block"><i class="fab fa-facebook"></i></a>
+            </div>
+            <div class="header">
+                <span class="left" onclick="openNav()">&#9776; MENU</span>
+                <img class="center" src="./logo/footerLogo.png" width="200" height="50"alt="logoPicture">
+            </div>
+            <hr class="navLine"> <!-- line to separate header from the main content-->
+        </header>
+
+        <!-- Content code -->
+        <!-- Table method -->
+        <table class="content-cont">
+            <tr>
+                <td valign="middle"><img class="abtPic" src="./pictures/ABOUT US STOCK IMAGE.jpeg"></td>
+                <td valign="top" >
+                    <p class="beforeWord"> Housing is a dedicated team of professionals looking to provide: modern, practical, and safe rental solutions for professional students. 
+                    We have over 12 years of rental experience that started with rental solutions for students. Our portfolio has grown to include: residential, commercial residential, 
+                    and commercial business.</p>
+                    <p class="beforeWord2">Our roots are what has brought us success based on understanding the needs of the professional student. 
+                        This includes: location, amenities, space, privacy, noise control, and safety. </p>
+                    <h2>VISION STATEMENT</h2>
+                    <p class="beforeWord3">To create real estate solutions that harbour community growth and unity through the advancement of a positive & professional demographic.</p>
+                    <h2>MISSION STATEMENT</h2>
+                    <p class="beforeWord4">Building our business through diversity and growth while treating all our residents with respect, fairness and responsiveness when caring for the place they call home.</p>
+                </td>
+
+            </tr>
+        </table>
+        <!-- <div class="content-container">
+            <div class="picture">
+                <img class="abtPic" src="./pictures/ABOUT US STOCK IMAGE.jpeg" width="400" height="300">
+            </div>
+
+            <div class="content">
+                <p class="beforeWord"> Housing is a dedicated team of professionals looking to provide: modern, practical, and safe rental solutions for professional students. 
+                    We have over 12 years of rental experience that started with rental solutions for students. Our portfolio has grown to include: residential, commercial residential, 
+                    and commercial business.</p>
+            </div>
+        </div> -->
+        <!-- Footer-->
+        <footer class="footerNote">
+            <div class="footerlo">
+                <img class="footerlogo" src="./logo/footerLogo.png" width="200" height="75">
+            </div>
+                <a href="index.html">HOME</a>
+                <p style="display: inline-block;">|</p>
+                <a href="aboutus.html"></i>ABOUT US</a>
+                <p style="display: inline-block;">|</p>
+                <a href="safety.html"></i>SAFETY</a>
+                <p style="display: inline-block;">|</p>
+                <a href="properties.html"></i>PROPERTIES</a>
+                <p style="display: inline-block;">|</p>
+                <a href="contactus.php"></i>CONTACT US</a>
+                <hr class="footLine">
+            <div class="footIcon">
+                <a href="https://www.facebook.com/paulmarhousing"><i class="fab fa-facebook"></i></a>
+            </div>
+        </footer>
+        <!-- Script for opening and closing the side navigation-->
+        <script>
+            function openNav() {
+                document.getElementById("sideNavigation").style.width = "30%";
+            }
+        
+            function closeNav() {
+                document.getElementById("sideNavigation").style.width = "0";
+            }
+        </script>
+    </body>
+</html>

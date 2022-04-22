@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset ="utf-8" />
+        <!-- This meta tag is for the description that will show up under google search-->
+        <meta name="description" content="PAULMAR Housing is a dedicated team of professionals looking to provide: modern, practical, and safe rental solutions for professional students." />
+        <!-- This meta tag is includes keywords that will be used by search engines -->
+        <meta name="keywords" content="paulmar housing, paulmar, for rent, university of windsor, housing, student housing, students, engineering, free parking, quality living, modern home, safety, homes near university" />
+        <title>Homepage</title>
+        <script src="https://kit.fontawesome.com/b31799f5a9.js" crossorigin="anonymous"></script> <!-- This is my kit of icons -->
+        <style>
+            html, body {
+                margin: 0;
+                padding: 0;
+                font-family: 'Open Sans', sans-serif;
+            }
+
+            img {
+                vertical-align: middle;
+            }
+            .logo {
+                /* background-color: rgba(133, 66, 66, 0.6); */
+                background-image: url("logo/logoBackground.jpeg");
+                background-blend-mode: multiply;
+                background-size: cover;
+                padding-bottom: 30px;
+            }
+            .center {
+                display: block;
+                margin-left: auto;
+                margin-right: auto;
+            }
+
+            .logoNav {
+                margin: 0;
+            }
+
+            .navBody {
+                margin: 0;
+            }
+            .nav ul {
+                margin: 0;
+            }
+
+            .nav li {
+                display: inline;
+            }
+
+            .nav a {
+                display: inline-block;
+                padding: 0.7em;
+                color: white;
+                text-decoration: none;
+            }
+
+            .main-nav {
+                text-align: center;
+                font-size: 1em;
+                font-weight: lighter;
+                background-color: black;
+            }
+
+            .nav a:hover {
+                background-color: white;
+                color: black;
+            }
+
+            .footerNote {
+                margin-top: 5px;
+                /* position: fixed;
+                width:100%;
+                bottom: 0; */
+                text-align: center;
+                background-image: url("logo/logoBackground.jpeg");
+                background-blend-mode: multiply;
+                background-size: cover;
+                padding-bottom: 30px;
+            }
+            .footerNote a {
+                text-align: center;
+                text-decoration: none;
+                color: black;
+                margin: 0;
+                padding: 8px;
+            }
+            .footerNote p {
+                margin: 0;
+                color: black;
+            }
+            .footLine {
+                width:50%;
+                color:black;
+            }
+            .footIcon {
+                text-align: center;
+            }
+            .footIcon a {
+                text-decoration: none;
+                font-size: 20px;
+                color: black;
+                padding-right: 25px;
+            }
+            /* Content of the page */
+            .beforeWord::before {
+                content: "Take";
+                font-size: 150%;
+                font-weight: 900;
+            }
+            .beforeWord {
+                font-size: 110%;
+                padding-left: 125px;
+
+            }
+            /* For map */
+            #map {
+                margin: auto;
+                height: 400px;
+                /* The height is 400 pixels */
+                width: 80%;
+                /* The width is the width of the web page */
+            }
+        </style>
+    </head>
+    <body>
+        <header>
+            <div class="logo">
+                <a href="index.html"><img class="center" src="./logo/logo.png" width="600" height="200"></a>
+            </div>
+            <hr class="logoNav">
+            <nav class="nav main-nav">
+                <ul>
+                    <li><a href="index.html">HOME</a></li>
+                    <li><a href="aboutus.html"></i>ABOUT US</a></li>
+                    <li><a href="safety.html"></i>SAFETY</a></li>
+                    <li><a href="properties.html"></i>PROPERTIES</a></li>
+                    <li><a href="contactus.php"></i>CONTACT US</a></li>
+                </ul>
+            </nav>
+            <hr class="navBody">
+        </header>
+        
+        <p class="beforeWord"> a look at some properties that may be available for you</p>
+         <!-- Map API -->
+        <div id="map">
+        
+        </div>
+            
+        <!-- Script for Map -->
+        <!-- Async script executes immediately and must be after any DOM elements used in callback. -->
+        <script
+            src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDIU4MNp0oTvqWD_YgOcoFQ89JNgYKnN2U&callback=initMap&libraries=&v=weekly"
+            async>
+            </script>
+        <script>
+            // Initialize and add the map
+            function initMap() {
+                // The location of University Of Windsor
+                const home = { lat: 42.30346711812645, lng: -83.05870067508617 };
+                
+                // The map, centered at UofWindsor
+                const map = new google.maps.Map(document.getElementById("map"), {
+                    zoom: 13,
+                    center: home,
+                });
+                // The marker, positioned at U of Windsor
+                const marker = new google.maps.Marker({
+                    position: home,
+                    map: map,
+                });
+
+            }
+        </script>
+        <footer class="footerNote">
+            <div class="footerlo">
+                <img class="footerlogo" src="./logo/footerLogo.png" width="200" height="75">
+            </div>
+                <a href="index.html">HOME</a>
+                <p style="display: inline-block;">|</p>
+                <a href="aboutus.html"></i>ABOUT US</a>
+                <p style="display: inline-block;">|</p>
+                <a href="safety.html"></i>SAFETY</a>
+                <p style="display: inline-block;">|</p>
+                <a href="properties.html"></i>PROPERTIES</a>
+                <p style="display: inline-block;">|</p>
+                <a href="contactus.php"></i>CONTACT US</a>
+                <hr class="footLine">
+            <div class="footIcon">
+                <a href="https://www.facebook.com/paulmarhousing"><i class="fab fa-facebook"></i></a>
+            </div>
+        </footer>
+    </body>
+</html>
